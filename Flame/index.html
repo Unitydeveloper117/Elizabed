@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Station</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Js/jquery.js"></script>
+    <script src="Js/weather.js"></script>
+    <script src="Js/Theme.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="Container">
+            <div id="branding">
+                <h1><span class="highlight">Blue</span> Weather Station</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a  href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
+           
+        </div>
+    </header>
+   <section>
+       <div class="Container">
+          <div class="Main">
+             <div class="searchbar" >
+               <h3>Enter The City Name:</h3>
+               <span id="error"></span><br>
+               <input type="text" name="city" id="city" class="form-control" placeholder="Enter City Name"><br><br>
+               <button id="submitWeather" class="PrimaryButton">Search City</button>
+               <button id="GetLocation" class="PrimaryButton">My Location</button><br>
+             </div>
+             <br>
+             <div class="Big-Cities">
+                 <button id="Isl">Islamabad</button>
+                 <button id="Kar">Karachi</button>
+                 <button id="Tok">Tokoyo</button>
+                 <button id="New">New York</button>
+                 <button id="Lon">London</button>
+                 <button id="Mad">Madrid</button>
+             </div>
+              <div class="result" id="result">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi culpa totam incidunt aliquam harum hic ut, minus odit placeat distinctio similique repellat ratione, iure a quos facere exercitationem nihil!
+              </div>
+            </div>
+        </div>
+   </section>
+    <footer class="container">
+        <p>Blue Weather Station, © 2020</p>
+        <div class="toggle-container">
+            <input type="checkbox" name="theme" id="switch"/>
+            <label class="label" for="switch">Toggle</label>  
+            </div>
+        
+    </footer>
+
+</body>
+</html>

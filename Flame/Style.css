@@ -1,0 +1,215 @@
+:root {
+--bg-color: #f4f4f4;
+--t-color:#35424a;
+--span-color:#44acec;
+--output-color:#35424a;
+}
+
+[data-theme="dark"]
+    {
+    --bg-color:  #35424a ;
+    --t-color:#f4f4f4;
+    --span-color:#44acec;
+    --output-color:#f4f4f4;
+}
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+   /* background-color: #35424a;*/
+}
+
+/* ******************************Header*****************/
+.Container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header{
+
+    color: var(--t-color);
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: var(--span-color) 3px solid;
+}
+header a{
+    
+    color: var(--t-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    }
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}    
+header #branding{
+float: left;
+}
+header #branding h1{
+    margin: 0;
+    color: var(--t-color);
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+.toggle-container{
+    float:right;
+    display: inline;
+}
+header .highlight, header .current a{
+    color: var(--span-color);
+    font-weight: bold;
+}
+header a:hover{
+    color: var(--span-color);
+    font-weight: bold;
+}
+/****************************Toggle Button*******************/
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+
+	width: 52px;
+	height: 27px;
+    background: var(--t-color);
+    float:right;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--span-color);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+
+/******************Footer***************/
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    border-top: var(--span-color) 3px solid;
+    color: var(--t-color);
+    background-color: var(--bg-color);
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 80% auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+     "title switch"
+     "content content";
+
+
+}
+/******************************** MAin*****************/
+.Main{
+    min-height: 800px;
+   
+     color: var(--t-color);
+}
+.result{
+    padding: 20px;
+    margin-top: 20px;
+    border: var(--span-color) 3px solid;
+  
+
+}
+.Big-Cities{
+    width:99%;
+    height:80px;
+    text-align: center;
+    background: var(--bg-color);
+    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 16.67% 16.66% 16.66% 16.66% 16.66% 16.66%;
+    grid-template-rows: auto;
+    grid-template-areas:
+     "title switch"
+     "content content";
+}
+button{
+    background: var(--span-color);
+color: var(--t-color);
+border: none;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+font-weight: bold;
+margin: 4px 2px;
+cursor: pointer;
+}
+
+.form-control{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--span-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#error{
+    
+    background:#f12e2e57;
+    color: red;
+}
+.result h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--bg-color);
+    background:var(--output-color);
+}
+.result h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--bg-color);
+    background:var(--output-color);
+}
+.result img{
+width: 40px;
+height: 40px;
+}
